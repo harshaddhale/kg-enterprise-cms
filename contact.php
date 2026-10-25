@@ -149,7 +149,7 @@ require __DIR__ . '/includes/header.php';
               </div>
             </fieldset>
 
-            <label class="consent<?= invalid('consent') ? ' has-error' : '' ?>"><input type="checkbox" name="consent" value="1" data-consent required<?= $values['consent'] ? ' checked' : '' ?>>I agree to KAJARA using these details to contact me about my enquiry, as described in the <a href="#">Privacy Policy</a>.</label>
+            <label class="consent<?= invalid('consent') ? ' has-error' : '' ?>"><input type="checkbox" name="consent" value="1" data-consent required<?= $values['consent'] ? ' checked' : '' ?>><span>I agree to KAJARA using these details to contact me about my enquiry, as described in the <a href="#">Privacy Policy</a>.</span></label>
 
             <div class="form-foot">
               <button type="submit" class="btn btn-primary">Request a call back <span class="spinner" aria-hidden="true"></span><svg class="i i-sm arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button>

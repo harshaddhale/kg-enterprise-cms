@@ -22,7 +22,7 @@ $config = [
     'office_address' => '[Registered office address]',
 
     /* Contact form delivery */
-    'mail_to'      => '',                          // where enquiries are emailed; empty = log only
+    'mail_to'      => 'harshad.dhale@gmail.com',   // where enquiries are emailed; empty = log only
     'mail_from'    => 'no-reply@kajaragroup.com',  // must be a domain your server may send for
     'mail_subject' => 'New call-back request from the website',
     'storage_dir'  => __DIR__ . '/storage',        // every enquiry is also appended here
