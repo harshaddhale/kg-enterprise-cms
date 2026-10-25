@@ -43,11 +43,13 @@ require __DIR__ . '/includes/header.php';
   <section class="hero hero-page" aria-labelledby="hero-h">
     <div class="wrap">
       <nav aria-label="Breadcrumb" class="rise"><ol class="crumbs"><li><a href="<?= page_url('home') ?>">Home</a></li><li aria-hidden="true">/</li><li aria-current="page">Services</li></ol></nav>
-      <div class="split" style="margin-top: 48px; align-items: end">
+      <div style="margin-top: 48px">
+        <p class="eyebrow rise" style="--d:1">Services</p>
+        <h1 id="hero-h" class="h1 rise" style="--d:2; margin-top: 20px">Dedicated engineers, mapped to your stack.</h1>
+      </div>
+      <div class="split" style="margin-top: 24px; align-items: end">
         <div>
-          <p class="eyebrow rise" style="--d:1">Services</p>
-          <h1 id="hero-h" class="h1 rise" style="--d:2; margin-top: 20px; max-width: 720px">Dedicated engineers, mapped to your stack.</h1>
-          <p class="lead rise" style="--d:3; max-width: 600px; margin-top: 24px">Embed full-time professionals across targeted technology segments. Every resource reports to your internal leads and works inside your infrastructure, pipelines and deployment architecture.</p>
+          <p class="lead rise" style="--d:3; max-width: 600px">Embed full-time professionals across targeted technology segments. Every resource reports to your internal leads and works inside your infrastructure, pipelines and deployment architecture.</p>
           <nav class="row rise" aria-label="On this page" style="--d:4; gap: 10px; margin-top: 32px">
             <a href="#cms" class="jump">Enterprise CMS</a>
             <a href="#aws" class="jump">AWS Infrastructure</a>
