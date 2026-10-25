@@ -1,21 +1,13 @@
-<!doctype html>
-<html lang="en-GB">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>About KAJARA | Human Infrastructure for Engineering Teams</title>
-<meta name="description" content="KAJARA Ltd (Company No. 11041244) helps technology leaders expand engineering capacity with dedicated, full-time professionals who work as part of their team. Learn our story, principles and the KAJARA Advantage.">
-<link rel="canonical" href="https://www.kajaragroup.com/about">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="KAJARA">
-<meta property="og:title" content="About KAJARA — human infrastructure for teams that ship">
-<meta property="og:description" content="Dedicated technical talent that works like an in-house hire, with none of the hiring overhead.">
-<meta name="theme-color" content="#0F172A">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
-<link rel="stylesheet" href="assets/styles.css">
-<script type="application/ld+json">
+<?php
+require __DIR__ . '/includes/bootstrap.php';
+
+$current_page = 'about';
+$page = [
+    'title'          => 'About KAJARA | Human Infrastructure for Engineering Teams',
+    'description'    => 'KAJARA Ltd (Company No. 11041244) helps technology leaders expand engineering capacity with dedicated, full-time professionals who work as part of their team. Learn our story, principles and the KAJARA Advantage.',
+    'og_title'       => 'About KAJARA — human infrastructure for teams that ship',
+    'og_description' => 'Dedicated technical talent that works like an in-house hire, with none of the hiring overhead.',
+    'json_ld'        => <<<'JSON'
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -34,74 +26,23 @@
     }
   ]
 }
-</script>
-</head>
-<body>
-<svg class="sprite" aria-hidden="true" focusable="false">
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
-  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
-  <symbol id="i-branch" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M6 9v6M18 9a9 9 0 0 1-9 9"/></symbol>
-  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></symbol>
-  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></symbol>
-  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
-  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
-  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M7 3l10 9-10 9"/></symbol>
-  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
-</svg>
+JSON,
+];
 
-<a class="skip" href="#main">Skip to content</a>
-
-<header class="site-header" data-header>
-  <div class="wrap header-inner">
-    <a href="index.html" class="logo" aria-label="KAJARA home">
-      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3l10 9-10 9" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>KAJARA</span>
-    </a>
-    <nav class="nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="about.html" aria-current="page">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="header-cta">
-      <a href="contact.html#call" class="btn btn-ghost btn-sm">Book a call</a>
-      <a href="contact.html#contact-form" class="btn btn-dark btn-sm">Request a proposal</a>
-    </div>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu" data-menu-btn><span></span><span></span></button>
-  </div>
-  <div class="mobile-nav" id="mobile-nav" data-mobile-nav>
-    <div class="mobile-nav-inner">
-      <div class="wrap">
-        <nav aria-label="Mobile">
-          <a href="index.html">Home</a>
-          <a href="about.html" aria-current="page">About</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <div class="row">
-          <a href="contact.html#call" class="btn btn-ghost">Book a call</a>
-          <a href="contact.html#contact-form" class="btn btn-dark">Request a proposal</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main id="main">
+require __DIR__ . '/includes/header.php';
+?>
 
   <section class="hero hero-page" aria-labelledby="hero-h">
     <div class="wrap">
-      <nav aria-label="Breadcrumb" class="rise"><ol class="crumbs"><li><a href="index.html">Home</a></li><li aria-hidden="true">/</li><li aria-current="page">About</li></ol></nav>
+      <nav aria-label="Breadcrumb" class="rise"><ol class="crumbs"><li><a href="<?= page_url('home') ?>">Home</a></li><li aria-hidden="true">/</li><li aria-current="page">About</li></ol></nav>
       <div class="hero-grid" style="margin-top: 48px; align-items: end">
         <div>
           <p class="eyebrow rise" style="--d:1">About KAJARA</p>
           <h1 id="hero-h" class="h1 rise" style="--d:2; margin-top: 20px">Human infrastructure for teams that ship.</h1>
           <p class="lead rise" style="--d:3; max-width: 600px; margin-top: 24px">We help technology leaders expand engineering capacity with dedicated, full-time professionals who work as part of their team, not as a vendor on the side.</p>
           <div class="row rise" style="--d:4; margin-top: 36px">
-            <a href="contact.html" class="btn btn-primary">Talk to our team <svg class="i i-sm arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-            <a href="services.html" class="btn btn-ghost">View services</a>
+            <a href="<?= page_url('contact') ?>" class="btn btn-primary">Talk to our team <svg class="i i-sm arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a href="<?= page_url('services') ?>" class="btn btn-ghost">View services</a>
           </div>
         </div>
         <aside class="card rise" style="--d:4; padding: 28px 32px" aria-labelledby="facts-h">
@@ -293,66 +234,13 @@
             <p class="lead">Tell us what you're building and the skills you're missing. We'll come back with a tailored resourcing proposal.</p>
           </div>
           <div class="row cta-actions" style="justify-content: flex-end">
-            <a href="contact.html#contact-form" class="btn btn-primary">Request a proposal <svg class="i i-sm arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-            <a href="contact.html#call" class="btn btn-outline-light">Book a discovery call</a>
+            <a href="<?= page_url('contact', 'contact-form') ?>" class="btn btn-primary">Request a proposal <svg class="i i-sm arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a href="<?= page_url('contact', 'call') ?>" class="btn btn-outline-light">Book a discovery call</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-</main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <a href="index.html" class="logo" aria-label="KAJARA home">
-          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3l10 9-10 9" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>KAJARA</span>
-        </a>
-        <p class="body" style="margin-top: 16px; max-width: 340px; font-size: 14.5px">Dedicated, full-time technical resources embedded in your team. Sourced, vetted and payroll-managed by KAJARA. Directed by you.</p>
-        <p class="foot-legal">KAJARA Ltd · Registered in England &amp; Wales<br>Company No. 11041244</p>
-      </div>
-      <nav aria-label="Company">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="about.html#advantage">The KAJARA Advantage</a></li>
-          <li><a href="index.html#how-it-works">How it works</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Services">
-        <h3>Services</h3>
-        <ul>
-          <li><a href="services.html#cms">Enterprise CMS</a></li>
-          <li><a href="services.html#aws">AWS Infrastructure</a></li>
-          <li><a href="services.html#tech">Ecommerce</a></li>
-          <li><a href="services.html#tech">Development</a></li>
-          <li><a href="services.html#tech">DevOps</a></li>
-        </ul>
-      </nav>
-      <div>
-        <h3>Get in touch</h3>
-        <ul>
-          <li><a href="contact.html">[Email address]</a></li>
-          <li><a href="contact.html">[Phone number]</a></li>
-        </ul>
-        <a href="contact.html#call" class="btn btn-dark btn-sm" style="margin-top: 16px">Book a discovery call</a>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <p>© <span data-year>2026</span> KAJARA Ltd. All rights reserved.</p>
-      <nav aria-label="Legal">
-        <a href="#">Terms of Placement</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Cookie Policy</a>
-      </nav>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/main.js"></script>
-</body>
-</html>
+<?php require __DIR__ . '/includes/footer.php'; ?>

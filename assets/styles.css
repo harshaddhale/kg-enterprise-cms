@@ -506,6 +506,8 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 .pod-row { animation: slide-in .7s var(--ease) backwards; animation-delay: calc(500ms + var(--d, 0) * 140ms); }
 .consent.has-error { color: var(--danger); }
 .consent.has-error input { outline: 2px solid var(--danger); outline-offset: 2px; }
+.form-alert { margin: 20px 0 0; padding: 12px 16px; border: 1px solid #FECACA; border-radius: var(--r-sm); background: #FEF2F2; color: var(--danger); font-size: 14.5px; line-height: 1.5; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 @keyframes slide-in { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: none; } }

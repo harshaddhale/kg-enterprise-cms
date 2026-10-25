@@ -111,12 +111,43 @@
     });
   });
 
-  /* Contact form — visual only: validates, shows a loading state, then a confirmation */
+  /* Contact form — validates in the browser, posts to the server, then shows a confirmation.
+     Without JS the form posts normally and the server renders errors or the confirmation. */
   var form = document.querySelector('[data-contact-form]');
   if (form) {
     var success = document.querySelector('[data-form-success]');
+    var alertBox = form.querySelector('[data-form-error]');
     var submit = form.querySelector('[type="submit"]');
     var fields = Array.prototype.slice.call(form.querySelectorAll('[data-validate]'));
+    var fallbackMsg = 'We could not send your request just now. Please call or email us instead.';
+
+    function showAlert(msg) {
+      if (!alertBox) return;
+      alertBox.textContent = msg || '';
+      alertBox.hidden = !msg;
+    }
+    function stopLoading() {
+      submit.classList.remove('is-loading');
+      submit.removeAttribute('aria-busy');
+    }
+    function showServerErrors(errors) {
+      var firstBad = null;
+      Object.keys(errors).forEach(function (name) {
+        if (name === 'form') return;
+        var input = form.elements[name];
+        if (!input) return;
+        if (name === 'consent') {
+          input.closest('.consent').classList.add('has-error');
+        } else {
+          input.classList.add('is-invalid');
+          input.setAttribute('aria-invalid', 'true');
+          input.closest('.field').classList.add('has-error');
+        }
+        if (!firstBad) firstBad = input;
+      });
+      showAlert(errors.form);
+      if (firstBad) firstBad.focus();
+    }
 
     function check(input) {
       var wrap = input.closest('.field');
@@ -141,24 +172,38 @@
         if (!firstBad) firstBad = consent;
       }
       if (firstBad) { firstBad.focus(); return; }
+      showAlert('');
       submit.classList.add('is-loading');
       submit.setAttribute('aria-busy', 'true');
-      setTimeout(function () {
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' },
+        credentials: 'same-origin'
+      }).then(function (res) {
+        return res.json().catch(function () { return { ok: false, errors: { form: fallbackMsg } }; });
+      }).then(function (data) {
+        stopLoading();
+        if (!data.ok) { showServerErrors(data.errors || { form: fallbackMsg }); return; }
         form.hidden = true;
         if (success) {
           success.hidden = false;
           var heading = success.querySelector('h2');
           if (heading) { heading.setAttribute('tabindex', '-1'); heading.focus(); }
         }
-      }, 900);
+      }, function () {
+        stopLoading();
+        showAlert(fallbackMsg);
+      });
     });
 
     var again = document.querySelector('[data-form-reset]');
     if (again) {
-      again.addEventListener('click', function () {
+      again.addEventListener('click', function (e) {
+        e.preventDefault();
         form.reset();
-        submit.classList.remove('is-loading');
-        submit.removeAttribute('aria-busy');
+        stopLoading();
+        showAlert('');
         form.hidden = false;
         success.hidden = true;
         var first = form.querySelector('input');

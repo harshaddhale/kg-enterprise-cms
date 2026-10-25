@@ -1,0 +1,28 @@
+# KAJARA — Apache routing. Requires mod_rewrite and AllowOverride All (standard on shared hosting).
+Options -Indexes -MultiViews
+DirectoryIndex index.php
+ErrorDocument 404 /404.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # If the site lives in a subfolder (e.g. example.com/kajara/), change this and the ErrorDocument path above.
+  RewriteBase /
+
+  # Never serve settings, templates, stored enquiries or the dev router
+  RewriteRule ^(includes|storage)(/|$) - [F,L]
+  RewriteRule ^(config(\.local)?|router)\.php$ - [F,L]
+  RewriteRule (^|/)\. - [F,L]
+
+  # Old static URLs and direct .php URLs → clean URLs (301 keeps search rankings)
+  RewriteCond %{THE_REQUEST} \s[^?\s]*\.(html|php)[?\s]
+  RewriteRule ^(?:index|(about|services|contact))\.(?:html|php)$ $1 [R=301,L]
+
+  # Clean URLs → PHP pages
+  RewriteRule ^(about|services|contact)/?$ $1.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
