@@ -91,17 +91,14 @@ require __DIR__ . '/includes/header.php';
       </div>
       <div class="g3" style="margin-top: 48px">
         <article class="card hover feature reveal">
-          <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></span>
           <h3 class="h3">Your direction, always</h3>
           <p class="body">Our people report to your leaders. We support from the side and never stand between you and your team.</p>
         </article>
         <article class="card hover feature reveal" style="--d:1">
-          <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span>
           <h3 class="h3">Ownership is non-negotiable</h3>
           <p class="body">Every line of code, every asset and every royalty belongs to you. No exceptions, no fine print.</p>
         </article>
         <article class="card hover feature reveal" style="--d:2">
-          <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg></span>
           <h3 class="h3">Certainty over surprises</h3>
           <p class="body">One transparent rate per resource. No setup fees, no revenue share, no hidden margins on your success.</p>
         </article>
@@ -142,27 +139,22 @@ require __DIR__ . '/includes/header.php';
       </div>
       <div class="g6" style="margin-top: 56px">
         <article class="card hover feature span2 reveal">
-          <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg></span>
           <h3 class="h3">On-demand</h3>
           <p class="body">Missing an in-house expert for a critical or short-term task? Access a diverse pool of vetted technical resources and plug capacity gaps quickly.</p>
         </article>
         <article class="card hover feature span2 reveal" style="--d:1">
-          <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-expand"/></svg></span>
           <h3 class="h3">Scale with flexibility</h3>
           <p class="body">Size your technical team up and down to meet changing demand, without the long-term commitment, admin or onboarding delays of permanent hires.</p>
         </article>
         <article class="card hover feature span2 reveal" style="--d:2">
-          <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-card"/></svg></span>
           <h3 class="h3">Cost-effectiveness</h3>
           <p class="body">Realise significant savings by removing localised benefits, ongoing training programme expenses and physical infrastructure costs.</p>
         </article>
         <article class="card hover feature span3 reveal">
-          <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span>
           <h3 class="h3">Code ownership</h3>
           <p class="body">Keep total control over your code and digital products. All intellectual property, generated source code and associated royalties remain 100% owned by your organisation.</p>
         </article>
         <article class="card hover feature span3 reveal" style="--d:1">
-          <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg></span>
           <h3 class="h3">Known outcomes</h3>
           <p class="body">Operate with financial certainty. Dedicated, full-time personnel at a transparent, predictable resource rate, with zero setup fees and zero revenue share.</p>
         </article>
@@ -178,7 +170,7 @@ require __DIR__ . '/includes/header.php';
       </div>
       <div class="g2" style="margin-top: 56px">
         <div class="card card-lg reveal">
-          <div class="row" style="gap: 12px"><span class="ic" style="background: var(--bg-hover); color: var(--ink)"><svg class="i" aria-hidden="true"><use href="#i-chevron"/></svg></span><h3 class="h3" style="font-size: 22px">KAJARA handles</h3></div>
+          <div class="row" style="gap: 12px"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-chevron"/></svg></span><h3 class="h3" style="font-size: 22px">KAJARA handles</h3></div>
           <ul class="ticks" style="margin-top: 28px">
             <li><svg class="i i-sm" aria-hidden="true"><use href="#i-check"/></svg>Sourcing and vetting technical candidates</li>
             <li><svg class="i i-sm" aria-hidden="true"><use href="#i-check"/></svg>Contracts and legal compliance</li>
@@ -188,7 +180,7 @@ require __DIR__ . '/includes/header.php';
           </ul>
         </div>
         <div class="card card-lg resp-you reveal" style="--d:1">
-          <div class="row" style="gap: 12px"><span class="ic" style="background: var(--blue); color: #FFFFFF"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></span><h3 class="h3" style="font-size: 22px">You control</h3></div>
+          <div class="row" style="gap: 12px"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></span><h3 class="h3" style="font-size: 22px">You control</h3></div>
           <ul class="ticks" style="margin-top: 28px">
             <li><svg class="i i-sm" aria-hidden="true"><use href="#i-check"/></svg>Interviews and final candidate selection</li>
             <li><svg class="i i-sm" aria-hidden="true"><use href="#i-check"/></svg>Onboarding to your stack and standards</li>

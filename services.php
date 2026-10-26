@@ -199,7 +199,7 @@ require __DIR__ . '/includes/header.php';
         </li>
         <li class="card hover step-card reveal" style="--d:2">
           <span class="num-badge">03</span>
-          <div><h3 class="h3">Seamless agile integration</h3><p class="body" style="margin-top: 10px">Resources embed in your sprint cycles, standups and roadmap tools, reporting to your management. We keep handling admin and benefits and let you scale team size as project demands shift.</p></div>
+          <div><h3 class="h3">Working inside your sprints</h3><p class="body" style="margin-top: 10px">Resources embed in your sprint cycles, standups and roadmap tools, reporting to your management. We keep handling admin and benefits and let you scale team size as project demands shift.</p></div>
         </li>
       </ol>
     </div>

@@ -43,8 +43,8 @@ require __DIR__ . '/includes/header.php';
   <section class="hero hero-home" aria-labelledby="hero-h">
     <div class="wrap hero-grid">
       <div>
-        <p class="pill rise" style="--d:0"><span class="dot" aria-hidden="true"></span>Onshore · Offshore · On demand</p>
-        <h1 id="hero-h" class="h1 rise" style="--d:1; margin-top: 28px">On-demand technical talent. <span class="accent">Scale your I.T. output.</span></h1>
+        <p class="eyebrow eyebrow-dot">Onshore, offshore and on-demand IT staff augmentation</p>
+        <h1 id="hero-h" class="h1 rise" style="--d:1; margin-top: 20px">On-demand technical talent. <span class="accent">Scale your I.T. output.</span></h1>
         <p class="lead rise" style="--d:2; max-width: 560px; margin-top: 24px">Dedicated, full-time developers and engineers embedded directly in your team. We source, vet and manage payroll. They report to your leadership, so strategic control, IP ownership and deployment authority stay with you.</p>
         <div class="row rise" style="--d:3; margin-top: 36px">
           <a href="<?= page_url('contact', 'contact-form') ?>" class="btn btn-primary">Request a proposal <svg class="i i-sm arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -100,7 +100,7 @@ require __DIR__ . '/includes/header.php';
     <div class="wrap split">
       <div class="reveal">
         <p class="eyebrow">What is KAJARA?</p>
-        <h2 id="what-h" class="h2">Not an agency. Not an MSP. Your extended team.</h2>
+        <h2 id="what-h" class="h2">An extension of your team, not an outside agency.</h2>
         <p class="lead">KAJARA is an IT staff augmentation partner. We provide dedicated, full-time technical professionals who work inside your workflows and report to your internal leads, while we take care of sourcing, contracts, compliance and international payroll.</p>
         <a href="<?= page_url('about') ?>" class="link" style="margin-top: 24px">Read our story <svg class="i i-sm arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
@@ -127,34 +127,29 @@ require __DIR__ . '/includes/header.php';
       <div class="between reveal">
         <div class="measure">
           <p class="eyebrow">The KAJARA Advantage</p>
-          <h2 id="adv-h" class="h2">Capacity when you need it. Control that never leaves.</h2>
+          <h2 id="adv-h" class="h2">Extra capacity, without giving up control.</h2>
           <p class="lead">Strategic IT augmentation designed to deliver immediate capacity and optimised efficiency, without handing your product to an outside firm.</p>
         </div>
         <a href="<?= page_url('about', 'advantage') ?>" class="btn btn-ghost">Why teams choose KAJARA</a>
       </div>
       <div class="g3" style="margin-top: 56px">
         <article class="card card-lg hover feature span2 reveal">
-          <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-award"/></svg></span>
           <h3 class="h3" style="font-size: 24px">On-demand expertise</h3>
           <p class="body" style="max-width: 560px">Missing an in-house expert for a critical or short-term task? Tap a diverse pool of vetted technical professionals and plug capacity gaps fast, without a months-long hiring cycle.</p>
         </article>
         <article class="card hover feature reveal" style="--d:1">
-          <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-expand"/></svg></span>
           <h3 class="h3">Scale with flexibility</h3>
           <p class="body">Size your team up or down as demand changes, without the commitment and admin of permanent hires.</p>
         </article>
         <article class="card hover feature reveal">
-          <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-card"/></svg></span>
           <h3 class="h3">Cost-effective</h3>
           <p class="body">Save on localised benefits, ongoing training programmes and physical infrastructure.</p>
         </article>
         <article class="card hover feature reveal" style="--d:1">
-          <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span>
           <h3 class="h3">You own the code</h3>
           <p class="body">All IP, source code and associated royalties stay 100% with your organisation.</p>
         </article>
         <article class="card hover feature reveal" style="--d:2">
-          <span class="ic"><svg class="i" aria-hidden="true"><use href="#i-target"/></svg></span>
           <h3 class="h3">Known outcomes</h3>
           <p class="body">A transparent, predictable resource rate. Zero setup fees, zero revenue share.</p>
         </article>
@@ -166,22 +161,22 @@ require __DIR__ . '/includes/header.php';
     <div class="wrap">
       <div class="center reveal">
         <p class="eyebrow">How it works</p>
-        <h2 id="proc-h" class="h2">We build together, in three steps.</h2>
+        <h2 id="proc-h" class="h2">From first call to first commit.</h2>
         <p class="lead">We grow your resource capacity alongside you, so every individual works under your operational direction.</p>
       </div>
       <ol class="g3 steps">
         <li class="step reveal" style="--d:0">
-          <span class="step-num">01 — Assess and select</span>
+          <span class="step-num">Step 1 &nbsp;/&nbsp; Assess and select</span>
           <h3 class="h3">Define the role. Choose your people.</h3>
           <p class="body">We map the skills and seniority you need. You review résumés, run technical interviews and make the final call.</p>
         </li>
         <li class="step reveal" style="--d:1">
-          <span class="step-num">02 — Onboard and integrate</span>
+          <span class="step-num">Step 2 &nbsp;/&nbsp; Onboard and integrate</span>
           <h3 class="h3">We handle the admin. You lead onboarding.</h3>
           <p class="body">Contracts, legal compliance and international payroll are on us. Your leaders train them on your stack and standards.</p>
         </li>
         <li class="step reveal" style="--d:2">
-          <span class="step-num">03 — Embed and scale</span>
+          <span class="step-num">Step 3 &nbsp;/&nbsp; Embed and scale</span>
           <h3 class="h3">They join your sprints. You scale at will.</h3>
           <p class="body">Resources work in your standups and roadmap tools. We keep supporting admin and benefits as your needs change.</p>
         </li>
@@ -246,7 +241,7 @@ require __DIR__ . '/includes/header.php';
     <div class="wrap split">
       <div class="reveal">
         <p class="eyebrow">FAQ</p>
-        <h2 id="faq-h" class="h2">Questions, answered.</h2>
+        <h2 id="faq-h" class="h2">Frequently asked questions</h2>
         <p class="lead">Everything technology leaders usually ask before adding a KAJARA resource to their team.</p>
         <a href="<?= page_url('contact') ?>" class="btn btn-dark" style="margin-top: 32px">Ask us directly</a>
       </div>
@@ -284,8 +279,7 @@ require __DIR__ . '/includes/header.php';
       <div class="cta reveal">
         <div class="split" style="align-items: center">
           <div>
-            <p class="eyebrow">Ready when you are</p>
-            <h2 id="cta-h" class="h2">Scale your internal technical capacity, seamlessly.</h2>
+            <h2 id="cta-h" class="h2">Add engineers to your team without the hiring cycle.</h2>
             <p class="lead">Share your technology stack and capacity requirements. We'll privately match and brief dedicated resources. You interview and decide.</p>
             <div class="row" style="margin-top: 32px">
               <a href="<?= page_url('contact', 'contact-form') ?>" class="btn btn-primary">Request a proposal <svg class="i i-sm arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>

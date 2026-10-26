@@ -27,7 +27,8 @@ $canonical = isset(PAGES[$current_page]) ? rtrim(cfg('site_url'), '/') . '/' . P
 <meta name="theme-color" content="#0F172A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@800&amp;display=swap">
+<link rel="icon" href="<?= e(asset('favicon.svg')) ?>" type="image/svg+xml">
 <link rel="stylesheet" href="<?= e(asset('styles.css')) ?>">
 <?php if (!empty($page['json_ld'])): ?>
 <script type="application/ld+json">
@@ -44,8 +45,7 @@ $canonical = isset(PAGES[$current_page]) ? rtrim(cfg('site_url'), '/') . '/' . P
 <header class="site-header" data-header>
   <div class="wrap header-inner">
     <a href="<?= page_url('home') ?>" class="logo" aria-label="KAJARA home">
-      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3l10 9-10 9" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>KAJARA</span>
+      <?php require __DIR__ . '/logo.php'; ?>
     </a>
     <nav class="nav" aria-label="Primary">
       <?= nav_links() ?>

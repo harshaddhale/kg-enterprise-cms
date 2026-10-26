@@ -9,8 +9,7 @@ $on_contact = $current_page === 'contact';
     <div class="foot-grid">
       <div>
         <a href="<?= page_url('home') ?>" class="logo" aria-label="KAJARA home">
-          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3l10 9-10 9" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>KAJARA</span>
+          <?php require __DIR__ . '/logo.php'; ?>
         </a>
         <p class="body" style="margin-top: 16px; max-width: 340px; font-size: 14.5px">Dedicated, full-time technical resources embedded in your team. Sourced, vetted and payroll-managed by KAJARA. Directed by you.</p>
         <p class="foot-legal"><?= e(cfg('company')) ?> · Registered in England &amp; Wales<br>Company No. <?= e(cfg('company_no')) ?></p>
