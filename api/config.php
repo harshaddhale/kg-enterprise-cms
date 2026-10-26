@@ -25,7 +25,7 @@ $config = [
     'mail_to'      => 'harshad.dhale@gmail.com',   // where enquiries are emailed; empty = log only
     'mail_from'    => 'no-reply@kajaragroup.com',  // must be a domain your server may send for
     'mail_subject' => 'New call-back request from the website',
-    'storage_dir'  => __DIR__ . '/storage',        // every enquiry is also appended here
+    'storage_dir'  => dirname(__DIR__) . '/storage', // every enquiry is also appended here
     'rate_limit'   => 5,                           // max submissions per visitor session per hour
 ];
 

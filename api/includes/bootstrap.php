@@ -3,11 +3,14 @@
 
 declare(strict_types=1);
 
+/* PHP lives in api/ (Vercel's convention); the site root, with assets/ and storage/, is one level up. */
+const SITE_ROOT = __DIR__ . '/../..';
+
 $config = require dirname(__DIR__) . '/config.php';
 
 /* Pages use clean URLs (/about, /contact). Links are root-relative from BASE, the site's URL folder,
    which is detected from the document root so the site also works from a subfolder. */
-$root = str_replace('\\', '/', (string) realpath(dirname(__DIR__)));
+$root = str_replace('\\', '/', (string) realpath(SITE_ROOT));
 $docroot = str_replace('\\', '/', (string) realpath($_SERVER['DOCUMENT_ROOT'] ?? ''));
 $in_docroot = $docroot !== '' && str_starts_with($root, $docroot);
 define('BASE', $config['base_path'] ?? rtrim($in_docroot ? substr($root, strlen($docroot)) : '', '/') . '/');
@@ -54,7 +57,7 @@ function nav_links(): string
 
 function asset(string $file): string
 {
-    $mtime = @filemtime(dirname(__DIR__) . '/assets/' . $file);
+    $mtime = @filemtime(SITE_ROOT . '/assets/' . $file);
     return BASE . 'assets/' . $file . ($mtime ? '?v=' . $mtime : '');
 }
 

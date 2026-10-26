@@ -1,24 +1,25 @@
 # KAJARA — Apache routing. Requires mod_rewrite and AllowOverride All (standard on shared hosting).
+# Pages live in api/ (the layout Vercel expects); these rules serve them at clean URLs from the site root.
 Options -Indexes -MultiViews
-DirectoryIndex index.php
-ErrorDocument 404 /404.php
+ErrorDocument 404 /api/404.php
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
   # If the site lives in a subfolder (e.g. example.com/kajara/), change this and the ErrorDocument path above.
   RewriteBase /
 
-  # Never serve settings, templates, stored enquiries or the dev router
-  RewriteRule ^(includes|storage)(/|$) - [F,L]
-  RewriteRule ^(config(\.local)?|router)\.php$ - [F,L]
+  # Never serve PHP source folders, stored enquiries or dotfiles when requested directly
+  RewriteCond %{THE_REQUEST} \s[^?\s]*/(api|storage)(/|[?\s])
+  RewriteRule ^ - [F,L]
   RewriteRule (^|/)\. - [F,L]
 
   # Old static URLs and direct .php URLs → clean URLs (301 keeps search rankings)
-  RewriteCond %{THE_REQUEST} \s[^?\s]*\.(html|php)[?\s]
-  RewriteRule ^(?:index|(about|services|contact))\.(?:html|php)$ $1 [R=301,L]
+  RewriteRule ^index\.(html|php)$ ./ [R=301,L]
+  RewriteRule ^(about|services|contact)\.(html|php)$ $1 [R=301,L]
 
-  # Clean URLs → PHP pages
-  RewriteRule ^(about|services|contact)/?$ $1.php [L]
+  # Clean URLs → PHP pages in api/
+  RewriteRule ^$ api/index.php [END]
+  RewriteRule ^(about|services|contact)/?$ api/$1.php [END]
 </IfModule>
 
 <IfModule mod_headers.c>
